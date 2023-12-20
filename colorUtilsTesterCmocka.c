@@ -9,7 +9,7 @@ static void test_toGrayScale (void**state)
  {
     (void) state;
 
-    int r = 100;
+int r = 100;
     
 int g = 150;
     
@@ -29,9 +29,7 @@ assert_int_equal(g, 134);
 assert_int_equal(b, 134);
 }
 
-static void
- 
-test_toSepia(void **state)
+static voidtest_toSepia(void **state)
  {
     (void) state;
 
