@@ -7,3 +7,8 @@ typedef enum
     LIGHNTESS,
     LUMINOSITY
 } Mode;
+
+int toGrayScale(int*r, int*g, int*b, Mode m);
+int toSepia(int *r, int *g, int *b);
+
+#endif
