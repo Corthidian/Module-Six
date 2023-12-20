@@ -49,3 +49,19 @@ if (error == NO_ERROR)
     
 return  error;
 }
+
+int toSepia(int *r, int *g, int *b)
+ {
+    if(r == NULL|| g == NULL|| b == NULL) 
+    {
+        return INVALID_INPUT;
+    }
+
+    
+int newR = (int)round(0.393 * *r + 0.769* *g +  0.189* *b);
+    
+int newG = (int)round(0.349* *r +  0.686* *g + 0.168* *b);
+    
+int newB = (int)round(0.272* *r + 0.534* *g + 0.131* *b);*r = (newR > 255) ? 255: newR;*g = (newG > 255) ? 255: newG;*b = (newB > 255) ? 255: newB;
+return  NO_ERROR;
+}
