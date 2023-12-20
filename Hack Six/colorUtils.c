@@ -32,3 +32,29 @@ return 2;
 return 0;
 
 }
+
+int cmykToRGB(double c, double m, doubley, double k, int *r, int *g, int *b)
+ {
+    
+if (r == NULL || g == NULL|| b == NULL) 
+{
+        
+return 1; 
+
+}
+
+    
+if(c < 0|| c >  1.0|| m < 0|| m > 1.0|| y < 0|| y > 1.0|| k < 0|| k > 1.0) 
+{
+        
+return 2; 
+
+}
+
+*r = round(MAX_COLOR_VALUE * (1.0- c) * (1.0- k));
+*g = round(MAX_COLOR_VALUE * (1.0- m) * (1.0- k));
+*b = round(MAX_COLOR_VALUE * (1.0- y) * (1.0- k));
+
+    
+return 0; 
+}
