@@ -39,4 +39,13 @@ break;
 default: error = INVALID_INPUT;
 
 }
+if (error == NO_ERROR) 
+ {
+        *r = grayValue;
+        *g = grayValue;
+        *b = grayValue;
+}
 
+    
+return  error;
+}
